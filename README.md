@@ -40,7 +40,7 @@ CLIENT01             192.168.10.50
 | 03 | [DNS Fundamentals](docs/03-dns-fundamentals.md) | ✅ |
 | 04 | [DNS Tools](docs/04-dns-tools.md) | ✅ |
 | 05 | [Install BIND](docs/05-bind-installation.md) | ✅ |
-| 06 | Basic BIND Configuration | ⏳ |
+| 06 | [Basic BIND Configuration](docs/06-bind-configuration.md) | ✅ |
 | 07 | Primary Authoritative DNS | ⏳ |
 | 08 | DNS Zone Files Deep Dive | ⏳ |
 | 09 | Reverse DNS | ⏳ |

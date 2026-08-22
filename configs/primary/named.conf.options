@@ -1,0 +1,44 @@
+# Reference: minimal working options block for DNS01 (Module 06)
+# Full context: docs/06-bind-configuration.md
+#
+# This is the options{} block built in Module 06. It listens on DNS01's
+# real static IP, restricts query/recursion to the lab subnet via a
+# named ACL, and keeps DNSSEC validation on for upstream lookups.
+# Later modules (07+) add zone {} declarations for internal.example.com
+# and its reverse zone into /etc/named.conf alongside this block.
+
+acl internal-networks {
+    192.168.10.0/24;
+};
+
+options {
+    directory "/var/named";
+
+    listen-on port 53 { 127.0.0.1; 192.168.10.10; };
+    listen-on-v6 port 53 { none; };
+
+    allow-query { internal-networks; localhost; };
+    allow-recursion { internal-networks; localhost; };
+
+    recursion yes;
+
+    dnssec-validation yes;
+
+    pid-file "/run/named/named.pid";
+    session-keyfile "/run/named/session.key";
+};
+
+logging {
+    channel default_debug {
+        file "data/named.run";
+        severity dynamic;
+    };
+};
+
+zone "." IN {
+    type hint;
+    file "named.ca";
+};
+
+include "/etc/named.rfc1912.zones";
+include "/etc/named.root.key";
