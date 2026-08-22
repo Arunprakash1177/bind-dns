@@ -39,7 +39,7 @@ CLIENT01             192.168.10.50
 | 02 | [Linux Networking Fundamentals](docs/02-networking.md) | ✅ |
 | 03 | [DNS Fundamentals](docs/03-dns-fundamentals.md) | ✅ |
 | 04 | [DNS Tools](docs/04-dns-tools.md) | ✅ |
-| 05 | Install BIND | ⏳ |
+| 05 | [Install BIND](docs/05-bind-installation.md) | ✅ |
 | 06 | Basic BIND Configuration | ⏳ |
 | 07 | Primary Authoritative DNS | ⏳ |
 | 08 | DNS Zone Files Deep Dive | ⏳ |
