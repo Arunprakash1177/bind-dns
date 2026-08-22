@@ -37,7 +37,7 @@ CLIENT01             192.168.10.50
 |---|--------|--------|
 | 01 | [Linux Server Preparation](docs/01-linux-preparation.md) | ✅ |
 | 02 | [Linux Networking Fundamentals](docs/02-networking.md) | ✅ |
-| 03 | DNS Fundamentals | ⏳ |
+| 03 | [DNS Fundamentals](docs/03-dns-fundamentals.md) | ✅ |
 | 04 | DNS Tools | ⏳ |
 | 05 | Install BIND | ⏳ |
 | 06 | Basic BIND Configuration | ⏳ |
