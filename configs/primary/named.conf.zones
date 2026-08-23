@@ -1,0 +1,12 @@
+# Reference: zone declaration added to /etc/named.conf on DNS01 (Module 07)
+# Full context: docs/07-primary-dns.md
+#
+# Append this block to /etc/named.conf, after the existing
+# zone "." IN { ... }; block that ships by default (see
+# configs/primary/named.conf.options for the surrounding options{}).
+
+zone "internal.example.com" IN {
+    type master;
+    file "internal.example.com.zone";
+    allow-transfer { none; };
+};

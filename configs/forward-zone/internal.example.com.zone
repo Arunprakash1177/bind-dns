@@ -1,0 +1,23 @@
+; Reference: internal.example.com forward zone (Module 07)
+; Full context: docs/07-primary-dns.md
+; File path on DNS01: /var/named/internal.example.com.zone
+; Owner/perms: root:named 640
+
+$TTL 86400
+@       IN      SOA     dns01.internal.example.com. admin.internal.example.com. (
+                            2026082201  ; serial
+                            3600        ; refresh
+                            900         ; retry
+                            604800      ; expire
+                            86400 )     ; minimum
+
+        IN      NS      dns01.internal.example.com.
+        IN      MX      10 dns01.internal.example.com.
+        IN      TXT     "internal.example.com lab zone - BIND DNS course"
+
+dns01   IN      A       192.168.10.10
+web01   IN      A       192.168.10.20
+db01    IN      A       192.168.10.30
+git01   IN      A       192.168.10.40
+
+www     IN      CNAME   web01.internal.example.com.
